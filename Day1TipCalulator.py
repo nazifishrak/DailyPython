@@ -13,6 +13,6 @@ TIP_PERCENTAGE = float(input("What percentage would you like to tip "))
 NO_OF_PEOPLE = int(input("Between how many people would the bill be split "))
 
 total_payable = bill*TIP_PERCENTAGE/100 + bill
-print(f"Each person will pay {round((total_payable/NO_OF_PEOPLE),2)}")
+print(f"Each person will pay {'{:.2f}'.format((total_payable/NO_OF_PEOPLE))}")
 
 
