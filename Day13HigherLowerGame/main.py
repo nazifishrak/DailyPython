@@ -5,27 +5,32 @@ import ascii_art
 score = 0
 game_not_over = True
 print(ascii_art.logo)
-def question_builder(data1: dict,data2: dict) -> None:
 
-    print(f"Compare A: {data1['name']}, a {data1['description']} from {data1['country']}")
+
+def question_builder(data1: dict, data2: dict) -> None:
+
+    print(
+        f"Compare A: {data1['name']}, a {data1['description']} from {data1['country']}")
 
     print(f"""
     {ascii_art.vs}""")
 
-    print(f"Compare B: {data2['name']}, a {data2['description']} from {data2['country']}")    
+    print(
+        f"Compare B: {data2['name']}, a {data2['description']} from {data2['country']}")
+
 
 def compare(inp: str, data1: dict, data2: dict):
     global score
     global game_not_over
-    if inp=="A" and data1['follower_count'] >= data2['follower_count']:
-        score +=1
+    if inp == "A" and data1['follower_count'] >= data2['follower_count']:
+        score += 1
         print(f"You're right! current score: {score}")
         game_not_over = True
-    elif inp =="B" and data1['follower_count'] <= data2['follower_count']:
-        score +=1
+    elif inp == "B" and data1['follower_count'] <= data2['follower_count']:
+        score += 1
         print(f"You're right! current score: {score}")
         game_not_over = True
-    else: 
+    else:
         print(f"You lose! Final Score: {score}")
         game_not_over = False
 
@@ -35,9 +40,5 @@ while game_not_over:
     random_data_dict2 = random.choice(data)
     question_builder(random_data_dict1, random_data_dict2)
     inp = input("Who has more followers, type 'A' or 'B': ")
-    
+
     compare(inp, random_data_dict1, random_data_dict2)
-        
-
-
-
