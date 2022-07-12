@@ -1,10 +1,10 @@
 import random
-from unicodedata import name
 from game_data import data
 import ascii_art
 
 score = 0
 game_not_over = True
+print(ascii_art.logo)
 def question_builder(data1: dict,data2: dict) -> None:
 
     print(f"Compare A: {data1['name']}, a {data1['description']} from {data1['country']}")
