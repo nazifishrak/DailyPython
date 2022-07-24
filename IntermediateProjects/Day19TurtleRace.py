@@ -31,7 +31,7 @@ def finished(tur: turtle.Turtle):
         return False
 
 def check_winner(answer: str, turtle: turtle.Turtle):
-    if turtle.xcor()>=WIDTH/2:
+    if turtle.xcor()>=(WIDTH/2 -30):
         if str(turtle.col) == answer:
             print(f'You won, {str(turtle.col)} turtle won')  
         else:
@@ -43,7 +43,7 @@ while race_not_finished:
     random_number = random.randint(0,len(list_of_turtle)-1)
     turt =  list_of_turtle[random_number]
     turt.forward(random.randint(0,10))
-    if turt.xcor()>=WIDTH/2:
+    if turt.xcor()>=(WIDTH/2 -30):
         check_winner(user_resp,turt)
         race_not_finished = False
 
