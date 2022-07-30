@@ -28,6 +28,7 @@ turtle4 = createTurtle("green", -200, -50)
 turtle5 = createTurtle("blue", -200, -90)
 
 list_of_turtle = [turtle1, turtle2, turtle3, turtle4, turtle5]
+# Test
 
 
 def finished(tur: turtle.Turtle):
